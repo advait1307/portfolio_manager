@@ -1,0 +1,8 @@
+streamlit
+pyotp
+kiteconnect
+requests
+pandas
+plotly
+python-dotenv
+bcrypt
