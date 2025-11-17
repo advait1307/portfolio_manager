@@ -55,7 +55,7 @@ class ZerodhaKiteAPI:
                     st.session_state.public_token = data["public_token"]
                     self.kite.set_access_token(st.session_state.access_token)
                     st.success("Authentication successful!")
-                    st.experimental_rerun()
+                    st.rerun()
                 except Exception as e:
                     self.get_auth_token()
             else:
