@@ -1,6 +1,7 @@
 import streamlit as st
 from zerodha import ZerodhaKiteAPI
 from fixeddeposit import FixedDepositApp
+from coin import CoinDCXAPI
 import pandas as pd
 
 st.set_page_config(page_title="Kite API Dashboard",page_icon="📈",layout="wide",initial_sidebar_state="expanded")
@@ -27,7 +28,8 @@ with tab2:
         graph_table['profit%'] = (graph_table['profit'] / graph_table['invested_amount']) * 100.00
         zerodhaobj.display_mutual_fund_metrics(graph_table)
 with tab3:
-    st.info('Coin Holdings Overview Coming Soon!')
+    obj = CoinDCXAPI()
+    obj.main()
 with tab4:
     fd_df = fdobj.dashboard()
     fdobj.dashboard_metrics(fd_df)
