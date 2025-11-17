@@ -11,7 +11,7 @@ from datetime import datetime
 
 
 BASE_URL = 'https://api.coindcx.com'
-INVESTMENT_VALUE = st.secrets["COIN_INVESTMENT_AMOUNT"]
+INVESTMENT_VALUE = float(st.secrets["COIN_INVESTMENT_AMOUNT"])
 
 class CoinDCXAPI:
     def __init__(self):
